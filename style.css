@@ -1,0 +1,79 @@
+#title {
+    position: relative;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adicione margem abaixo do título conforme necessário */
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 50px; /* Adicione esta linha para arredondar os cantos */
+}
+
+
+#title-content {
+    padding: 50px 0;
+    font-size: 30px;
+}
+
+h1 ,h2 {
+    margin-left: 50px;
+    margin-right:50px ;
+}
+h1{
+    font-family: "Trirong", serif;
+}
+h2{
+    font-style: oblique;
+}
+/* Estilos padrão (light mode) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.5s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+#content {
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    transition: background-color 0.5s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+/* Estilos para dark mode */
+.dark-mode body {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-mode #content {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Estilos padrão (light mode) para o botão */
+#toggle-mode-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #000000; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    padding: 20px 40px; /* Preenchimento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 20px; /* Faz com que o botão seja redondo, ajuste conforme necessário */
+    cursor: pointer; /* Adiciona um cursor ao passar o mouse sobre o botão */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Adiciona transições suaves para mudanças de cor */
+}
+
+/* Estilos para dark mode para o botão */
+.dark-mode #toggle-mode-btn {
+    background-color: #ffffff; /* Cor de fundo do botão no dark mode */
+    color: #000000; /* Cor do texto do botão no dark mode */
+}
