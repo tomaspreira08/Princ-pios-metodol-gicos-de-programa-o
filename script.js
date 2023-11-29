@@ -15,3 +15,36 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleBtn.style.color = document.body.classList.contains('dark-mode') ? '#000000' : '#ffffff';
     });
 });
+
+
+/*texto a aparecer suavemente*/
+document.addEventListener('scroll', function () {
+    var mainTitle = document.querySelector('.main-title');
+    var headingsAndImages = document.querySelectorAll('#content h2, #content h1, #content img');
+
+    toggleVisibility(mainTitle, false); // Não adicionar 'visible' ao mainTitle
+
+    headingsAndImages.forEach(function (element) {
+        toggleVisibility(element);
+    });
+});
+
+function toggleVisibility(el, excludeMainTitle = true) {
+    if (excludeMainTitle && el.classList.contains('main-title')) {
+        return; // Ignorar o título principal se excludeMainTitle for verdadeiro
+    }
+
+    if (isElementPartiallyInViewport(el)) {
+        el.classList.add('visible');
+    } else {
+        el.classList.remove('visible');
+    }
+}
+
+function isElementPartiallyInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top <= window.innerHeight &&
+        rect.bottom >= 0
+    );
+}

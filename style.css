@@ -77,3 +77,23 @@ body {
     background-color: #ffffff; /* Cor de fundo do botão no dark mode */
     color: #000000; /* Cor do texto do botão no dark mode */
 }
+
+
+
+
+/* texto e imagens a aparecerem suavemente */
+h1.main-title,
+h1,
+h2,
+img {
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 500ms ease-in-out;
+}
+
+h1.main-title.visible,
+h1.visible,
+h2.visible,
+img.visible {
+    opacity: 1; /* Torna visível */
+}
+
